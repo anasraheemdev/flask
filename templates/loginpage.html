@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='stylelogin.css') }}">
+
+
+<script src=""></script>
+
+<body>
+
+    <div class="login_form">
+	    <h2>Login</h2>
+        <form action="{{ url_for('main_page') }}" method="POST">
+		
+		    <div class = "username" >
+			<!---username--->
+			    <label for = "username">Username</label>
+				<input type="text" id="username" name = "username" placeholder ="Enter your username" required>
+			
+			</div>
+			
+			<div class = "password">
+			<!---password--->
+			    <label for = "password">Password</label>
+				<input type="password" id="password" name = "password" placeholder ="Enter your password" required>
+			    <small class = "text-muted">We'll never share your email with anyone</small>
+			</div>
+			
+			<div class = "button">
+			    <button type = "submit" class = "btn btn-primary">Submit</button>
+			</div>
+			
+			<div class="backtoabout">
+                <a href="{{ url_for('about') }}" style="color:white;">Back to About Us Page</a>
+            </div>
+            
+			
+			<div class="register-up">
+                <p>Don't have an account? Register now</p>
+                <a href="{{ url_for('register') }}" style="color:rgb(246, 236, 239);">Register</a>
+            </div>
+            
+			
+		</form>
+ 
+    </div>
+
+</body>
+</html>

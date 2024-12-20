@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleabout.css') }}">
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="text-container">
+        <h2>About Us</h2>
+        <p class="mission-paragraph">At Aegis AI, we specialize in providing AI-driven solutions for detecting deepfakes, helping individuals and organizations ensure content authenticity. Our advanced algorithms utilize machine learning techniques to accurately identify manipulated media and misinformation. With customizable tools, we empower users to protect their digital spaces and make informed decisions.</p>
+        <p><a href="{{ url_for('login') }}" class="explore-link">Let's get Started with us</a></p>
+    </div>
+</div>
+
+<section class="why-choose-section">
+    <h2>Why Choose Our Model?</h2>
+    <div class="features">
+        <div class="feature">
+            <h3>Accurate Detection</h3>
+            <p>Our AI is trained to identify subtle manipulations in images and videos.</p>
+        </div>
+        <div class="feature">
+            <h3>Fast Results</h3>
+            <p>Get your results in seconds with high accuracy.</p>
+        </div>
+        <div class="feature">
+            <h3>Customizable Solutions</h3>
+            <p>Tailored tools to meet individual or organizational needs.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Additional Features Section -->
+<section class="additional-features-section">
+    <h2>Features at a Glance</h2>
+    <ul class="feature-list">
+        <li>Secure and reliable deepfake detection system</li>
+        <li>Seamless integration with various platforms</li>
+        <li>AI-driven insights to combat misinformation</li>
+        <li>User-friendly interface for hassle-free operation</li>
+        <li>Support for a wide range of file formats</li>
+    </ul>
+</section>
+
+<!-- Footer -->
+<footer class="about-footer">
+    <p>&copy; 2024 Aegis AI. Your trust, our priority.</p>
+</footer>
+
+</body>
+</html>

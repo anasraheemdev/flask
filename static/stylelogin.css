@@ -1,0 +1,114 @@
+body {
+    background-color: #f4f4f4;
+	font-family: NewYork, sans-serif;
+	margin:0;
+	padding:0;
+    background-image: url('images3.jpg');
+    background-position: center;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border:2px solid rgba(255,255,255, .2);
+    backdrop-filter: blur(5px); 
+    /* background: linear-gradient(to right, rgb(193, 216, 224), rgb(140, 54, 69)); */
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.login_form {
+    width:500px;
+	margin:150px auto;
+	padding:25px;
+	border-radius:20px; 
+	background: transparent;
+	/* border:2px solid rgba(255,255,255, .2);
+    backdrop-filter: blur(10px); 
+	box-shadow : 0 0 10px rgba(0, 0, 0, .2);  */
+}
+
+h2 {
+text-align: center;
+}
+
+label {
+    display:inline-block;
+    font-size:14px;
+    margin-bottom:5px;
+    background: transparent;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+
+}
+
+
+button {
+    width: 40%; /* Set the width to 40% */
+    padding: 10px;
+    background: linear-gradient(to right, red, white); 
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.3s ease, transform 0.2s ease; 
+    margin-left: auto; 
+    margin-right: auto;
+    display: block; 
+}
+
+
+button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-2px); 
+}
+
+.text-muted {
+    font-size: 12px;
+    color: rgb(27, 25, 29);
+    display: block;
+    margin-top: 5px;
+}
+
+.backtoabout {
+    margin-top: 10px; 
+    text-align: center;
+    color: rgb(242, 243, 244); 
+}
+
+.register-up {
+    margin-top: 15px; 
+    text-align: center;
+}
+
+
+.main-page-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #ffffff; /* Optional, adjust to your theme */
+    text-decoration: none;
+}
+
+.main-page-link:hover {
+    text-decoration: underline;
+    color: #f2f2f2; /* Lighter shade on hover */
+}
