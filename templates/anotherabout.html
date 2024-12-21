@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AegisAI - About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        #tsparticles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #800000, #600000);
+            color: white;
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #800000;
+            margin-bottom: 1rem;
+        }
+
+        .btn-primary {
+            background-color: #800000;
+            border-color: #800000;
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+        }
+
+        .btn-primary:hover {
+            background-color: #600000;
+            border-color: #600000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(128, 0, 0, 0.2);
+        }
+
+        .feature-list-item {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-list-item:hover {
+            transform: translateX(10px);
+        }
+
+        .about-footer {
+            background: #800000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="tsparticles"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="fas fa-shield-alt me-2" style="color: #800000;"></i>
+                <span class="fw-bold" style="color: #800000;">AegisAI</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeIn">About AegisAI</h1>
+                    <p class="lead mb-4 animate__animated animate__fadeIn animate__delay-1s">
+                        At AegisAI, we specialize in providing AI-driven solutions for detecting deepfakes, helping individuals and organizations ensure content authenticity. Our advanced algorithms utilize machine learning techniques to accurately identify manipulated media and misinformation.
+                    </p>
+                    <a href="{{ url_for('login') }}" class="btn btn-light btn-lg animate__animated animate__fadeIn animate__delay-2s">
+                        Get Started <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: #800000;" data-aos="fade-up">Why Choose Our Model?</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card p-4 text-center">
+                        <i class="fas fa-bullseye feature-icon"></i>
+                        <h3 class="h4 mb-3">Accurate Detection</h3>
+                        <p>Our AI is trained to identify subtle manipulations in images and videos with precision and reliability.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card p-4 text-center">
+                        <i class="fas fa-bolt feature-icon"></i>
+                        <h3 class="h4 mb-3">Fast Results</h3>
+                        <p>Get your analysis results in seconds without compromising on accuracy or reliability.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card p-4 text-center">
+                        <i class="fas fa-cogs feature-icon"></i>
+                        <h3 class="h4 mb-3">Customizable Solutions</h3>
+                        <p>Tailored tools and solutions to meet specific individual or organizational requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: #800000;" data-aos="fade-up">Features at a Glance</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="feature-list-item d-flex align-items-center" data-aos="fade-right">
+                        <i class="fas fa-shield-alt me-3" style="color: #800000;"></i>
+                        <span>Secure and reliable deepfake detection system</span>
+                    </div>
+                    <div class="feature-list-item d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                        <i class="fas fa-puzzle-piece me-3" style="color: #800000;"></i>
+                        <span>Seamless integration with various platforms</span>
+                    </div>
+                    <div class="feature-list-item d-flex align-items-center" data-aos="fade-right" data-aos-delay="200">
+                        <i class="fas fa-brain me-3" style="color: #800000;"></i>
+                        <span>AI-driven insights to combat misinformation</span>
+                    </div>
+                    <div class="feature-list-item d-flex align-items-center" data-aos="fade-right" data-aos-delay="300">
+                        <i class="fas fa-user-friends me-3" style="color: #800000;"></i>
+                        <span>User-friendly interface for hassle-free operation</span>
+                    </div>
+                    <div class="feature-list-item d-flex align-items-center" data-aos="fade-right" data-aos-delay="400">
+                        <i class="fas fa-file-alt me-3" style="color: #800000;"></i>
+                        <span>Support for a wide range of file formats</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4" style="color: #800000;" data-aos="fade-up">Ready to Get Started?</h2>
+            <p class="mb-4" data-aos="fade-up">Join us in the fight against digital manipulation and misinformation.</p>
+            <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg" data-aos="fade-up">
+                Create Account <i class="fas fa-user-plus ms-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="about-footer py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 AegisAI. Your trust, our priority.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Initialize tsParticles
+        tsParticles.load("tsparticles", {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#800000"
+                },
+                opacity: {
+                    value: 0.2,
+                    random: false
+                },
+                size: {
+                    value: 3,
+                    random: true
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#800000",
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>

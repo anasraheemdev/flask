@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AegisAI - Advanced Deepfake Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        #tsparticles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .team-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #800000;
+        }
+
+        .upload-box {
+            border: 2px dashed #800000;
+            border-radius: 10px;
+            padding: 3rem;
+            transition: all 0.3s ease;
+        }
+
+        .card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .btn-primary {
+            background-color: #800000;
+            border-color: #800000;
+        }
+
+        .btn-primary:hover {
+            background-color: #600000;
+            border-color: #600000;
+        }
+    </style>
+</head>
+<body>
+    <div id="tsparticles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/static/logo.png" alt="AegisAI Logo" class="me-1 rounded-circle" width="50px">
+                <span class="fw-bold" style="color: #800000;">AegisAI</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-5 text-center animate__animated animate__fadeIn">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4" style="color: #800000;">Welcome to AegisAI</h1>
+            <p class="lead">Advanced Deepfake Detection Powered by Artificial Intelligence</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: #800000;" data-aos="fade-up">Why Choose AegisAI?</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-shield-alt fa-3x mb-3" style="color: #800000;"></i>
+                            <h3 class="h4">Advanced Security</h3>
+                            <p class="text-muted">State-of-the-art deepfake detection algorithms</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-bolt fa-3x mb-3" style="color: #800000;"></i>
+                            <h3 class="h4">Real-Time Analysis</h3>
+                            <p class="text-muted">Instant results with high accuracy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-chart-line fa-3x mb-3" style="color: #800000;"></i>
+                            <h3 class="h4">Continuous Learning</h3>
+                            <p class="text-muted">AI models that evolve with new threats</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="card shadow-lg" data-aos="fade-up">
+                <div class="card-body p-5">
+                    <h2 class="text-center mb-4" style="color: #800000;">Test Our Technology</h2>
+                    <div class="upload-box bg-white">
+                        <form method="POST" enctype="multipart/form-data">
+                            <input type="file" id="userImage" name="user_image" accept="image/*" class="d-none" required>
+                            <label for="userImage" class="btn btn-primary mb-3">
+                                <i class="fas fa-cloud-upload-alt me-2"></i>Choose Image
+                            </label>
+                            <p class="text-muted" id="fileName">No file chosen</p>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-search me-2"></i>Analyze Image
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: #800000;" data-aos="fade-up">Meet Our Expert Team</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <img src="/static/aqsa.jpg" alt="Aqsa Junaid" class="team-photo mb-4 object-fit-fill" >
+                            <h3 class="h4">Aqsa Junaid</h3>
+                            <p class="text-muted mb-2">Web Developer</p>
+                            <p>Frontend specialist with expertise in modern web technologies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <img src="/static/Shehzad.jpg" alt="Shehzad Sikandar" class="team-photo mb-4">
+                            <h3 class="h4">Shehzad Sikandar</h3>
+                            <p class="text-muted mb-2">ML Engineer</p>
+                            <p>Expert in deep learning and computer vision</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <img src="/static/Aleeza.jpg" alt="Aleeza Asghar" class="team-photo mb-4">
+                            <h3 class="h4">Aleeza Asghar</h3>
+                            <p class="text-muted mb-2">AI Researcher</p>
+                            <p>Specializing in artificial intelligence and neural networks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="card shadow-lg mx-auto" style="max-width: 800px;" data-aos="fade-up">
+                <div class="card-body p-5">
+                    <h2 class="text-center mb-4" style="color: #800000;">Share Your Feedback</h2>
+                    <textarea id="feedbackInput" class="form-control mb-3" rows="5" placeholder="We'd love to hear your thoughts..."></textarea>
+                    <button onclick="submitFeedback()" class="btn btn-primary w-100">
+                        <i class="fas fa-paper-plane me-2"></i>Send Feedback
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-3">&copy; 2024 AegisAI. Ensuring digital authenticity through innovation.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="https://www.instagram.com" class="text-white fs-4" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" class="text-white fs-4" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://github.com" class="text-white fs-4" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Initialize tsParticles
+        tsParticles.load("tsparticles", {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#800000"
+                },
+                opacity: {
+                    value: 0.2,
+                    random: false
+                },
+                size: {
+                    value: 3,
+                    random: true
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#800000",
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+
+        // File input handling
+        document.getElementById('userImage').addEventListener('change', function(e) {
+            const fileName = e.target.files[0]?.name || 'No file chosen';
+            document.getElementById('fileName').textContent = fileName;
+        });
+
+        // Feedback submission
+        function submitFeedback() {
+            const feedback = document.getElementById('feedbackInput').value;
+            if (feedback.trim() === "") {
+                alert("Please enter your feedback before submitting!");
+                return;
+            }
+            alert("Thank you for your valuable feedback!");
+            document.getElementById('feedbackInput').value = "";
+        }
+    </script>
+</body>
+</html>
